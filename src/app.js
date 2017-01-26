@@ -8,11 +8,16 @@ import { createStore } from 'redux';
 
 //Import components, functions, and styles
 import reducers from './reducers';
+import { Header } from './components/common';
+import LibraryList from './components/LibraryList';
 
 const App = () => {
 	return (
 		<Provider store={createStore(reducers)}>
-			<View />
+			<View>
+				<Header headerText="Flashcards" />
+				<LibraryList />
+			</View>
 		</Provider>
 	);
 };
