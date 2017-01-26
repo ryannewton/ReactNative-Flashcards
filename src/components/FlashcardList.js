@@ -2,6 +2,7 @@
 
 // Import libraries
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class FlashcardList extends Component {
 	render() {
@@ -9,4 +10,8 @@ class FlashcardList extends Component {
 	}
 }
 
-export default FlashcardList;
+const mapStateToProps = (state) => {
+	return { flashcards: state.flashcards };
+};
+
+export default connect(mapStateToProps)(FlashcardList);
