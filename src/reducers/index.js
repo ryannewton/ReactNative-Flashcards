@@ -4,8 +4,8 @@
 import { combineReducers } from 'redux';
 
 //Import Reducers
-import FlashcardReducer from './FlashcardReducer';
+import LibraryReducer from './LibraryReducer';
 
 export default combineReducers({
-	flashcards: FlashcardReducer
+	libraries: LibraryReducer
 });

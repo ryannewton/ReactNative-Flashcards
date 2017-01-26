@@ -1,6 +1,6 @@
 'use strict';
 
 // Import data
-import data from './FlashcardData.json';
+import data from './LibraryData.json';
 
 export default () => data;
