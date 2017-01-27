@@ -7,7 +7,8 @@ import {
 	TouchableWithoutFeedback,
 	View,
 	UIManager,
-	LayoutAnimation
+	LayoutAnimation,
+	Platform
 } from 'react-native';
 import { connect } from 'react-redux';
 
@@ -17,7 +18,10 @@ import * as actions from '../actions';
 
 class ListItem extends Component {
 	componentWillMount() {
-		UIManager.setLayoutAnimationEnabledExperimental(true);
+		// LayoutAnimation is disabled by default on Android
+		if (Platform.OS === 'android') {
+			UIManager.setLayoutAnimationEnabledExperimental(true);
+		}
 	}
 
 	componentWillUpdate() {
